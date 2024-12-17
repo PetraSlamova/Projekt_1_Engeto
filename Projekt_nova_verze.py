@@ -31,8 +31,12 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
-
-users = {"bob" : "123", "ann": "pass123", "mike" : "password123", "liz" : "pass123"} #uživatelé a hesla
+users = {
+    "bob" : "123",
+    "ann": "pass123",
+    "mike" : "password123",
+    "liz" : "pass123"
+} #uživatelé a hesla
 
 name = input("Zadej své jméno: ")
 password = input("Zadej heslo: ")
@@ -59,7 +63,6 @@ if vyber.isnumeric():
         print("Nesprávná volba. Program se ukončuje.")
         exit()
 print(oddelovac)
-
 # Výběr textu
 text = texts[vyber - 1]
 pocet_slov = len(text.split())
@@ -83,17 +86,13 @@ print(oddelovac)
 print(f" {'LEN':<3}|{'OCCURRENCES':^17}|{'NR.':>4}")
 # seznamu délky každého slova
 delka_slov = [len(word.strip(string.punctuation)) for word in text.split()]
-
 # Vytvoření množiny délek slov
 mnozina_delka = set(delka_slov)
-
 # frekvence jednotlivých délek slov
 frekvence_delka = []
 for delka in mnozina_delka:
     frekvence_delka.append(delka_slov.count(delka))
-
 nejvyssi_delka = max(frekvence_delka)
-
 # tabulka
 star = '*'
 space = ' '
